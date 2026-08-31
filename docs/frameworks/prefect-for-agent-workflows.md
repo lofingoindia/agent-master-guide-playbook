@@ -145,4 +145,4 @@ Prefect’s default result serializer includes pickle. Treat persisted results a
 - [Interactive workflows](https://docs.prefect.io/v3/advanced/interactive), [cancellation](https://docs.prefect.io/v3/advanced/cancel-workflows), and [deployments](https://docs.prefect.io/v3/concepts/deployments)
 - [Automations](https://docs.prefect.io/v3/concepts/automations), [task runners](https://docs.prefect.io/v3/concepts/task-runners), and [secret storage](https://docs.prefect.io/v3/how-to-guides/configuration/store-secrets)
 
-See [durable-runtime selection](../comparisons/durable-agent-workflow-runtimes.md) and the [research packet](../research/packets/durable-agent-workflow-runtimes.md).
+See [durable-runtime selection](../comparisons/durable-agent-workflow-runtimes.md), [Python agent runtimes](../languages/python-agent-runtimes.md), and the [research packet](../research/packets/durable-agent-workflow-runtimes.md).

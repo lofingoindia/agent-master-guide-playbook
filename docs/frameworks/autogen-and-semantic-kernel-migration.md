@@ -8,7 +8,9 @@
 
 Do not begin a strategic new system on AutoGen: its official repository is in maintenance mode, community-managed, and no longer receives new features. For existing AutoGen or Semantic Kernel agent systems, migrate behavior—not class names—to Microsoft Agent Framework (MAF), using workload traces and old persisted state as the acceptance contract.
 
-Semantic Kernel remains useful beyond agents, including existing functions and vector-store connectors. Move only the agent/runtime boundary that benefits; a staged adapter migration is safer than a rewrite.
+Use the [AutoGen retained-production engineering guide](autogen/README.md) to operate, contain, test, and retire an existing AutoGen estate before or during migration.
+
+Semantic Kernel remains useful beyond agents, including existing kernels, functions, filters, prompt assets, connectors, and vector-store components. Use the [Semantic Kernel retained-ecosystem guide](semantic-kernel/README.md) to decide what to stabilize, retain, adapt, or migrate. Move only the agent/runtime boundary that benefits; a staged adapter migration is safer than a rewrite.
 
 ```mermaid
 flowchart LR
@@ -127,4 +129,4 @@ Do not preserve the `Kernel` as a global service locator inside every new agent 
 - [Semantic Kernel→MAF guide](https://learn.microsoft.com/en-us/agent-framework/migration-guide/from-semantic-kernel/)
 - State adoption tests from [AutoGen team implementation](https://github.com/microsoft/autogen/blob/main/python/packages/autogen-agentchat/src/autogen_agentchat/teams/_group_chat/_base_group_chat.py) and [serialization issue #6793](https://github.com/microsoft/autogen/issues/6793)
 
-See [Microsoft Agent Framework in production](microsoft-agent-framework.md), [evolving ecosystem selection](../comparisons/evolving-agent-framework-ecosystems.md), and the [research packet](../research/packets/framework-lifecycle-and-second-wave.md).
+See the [Microsoft Agent Framework production playbook](microsoft-agent-framework/README.md), [Semantic Kernel retained-ecosystem guide](semantic-kernel/README.md), [AutoGen retained-production guide](autogen/README.md), [evolving ecosystem selection](../comparisons/evolving-agent-framework-ecosystems.md), the [Semantic Kernel deep-dive packet](../research/packets/semantic-kernel-agents-deep-dive.md), and the earlier [ecosystem packet](../research/packets/framework-lifecycle-and-second-wave.md).

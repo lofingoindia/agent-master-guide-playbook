@@ -338,7 +338,10 @@ OpenTelemetry JavaScript traces and metrics are stable; logs are Development. AI
 
 ## Related guides
 
+- [Node.js agent runtime engineering](nodejs/README.md)
+- [TypeScript agent engineering](typescript/README.md)
 - [Choosing an agent runtime language](choosing-an-agent-runtime-language.md)
+- [Go vs Python vs TypeScript/Node.js](../comparisons/go-vs-python-vs-typescript-node-agent-runtimes.md)
 - [Python vs TypeScript/Node.js](../comparisons/python-vs-typescript-node-agent-runtimes.md)
 - [Run controls](../runtime/run-controls.md)
 - [Queues, scheduling, and backpressure](../operations/queues-scheduling-and-backpressure.md)

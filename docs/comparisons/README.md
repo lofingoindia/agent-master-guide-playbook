@@ -7,6 +7,8 @@
 - [Selecting an independent agent framework](independent-agent-frameworks.md)
 - [Selecting across evolving agent framework ecosystems](evolving-agent-framework-ecosystems.md)
 - [Selecting a durable runtime for agent workflows](durable-agent-workflow-runtimes.md)
+- [Python vs TypeScript/Node.js for agent runtimes](python-vs-typescript-node-agent-runtimes.md)
+- [Go vs Python vs TypeScript/Node.js for agent runtimes](go-vs-python-vs-typescript-node-agent-runtimes.md)
 
 ## Queued comparisons
 
@@ -18,6 +20,5 @@
 - Direct tool registration vs tool search.
 - RAG vs memory.
 - Vector memory vs structured memory.
-- Go vs Python vs TypeScript for agent runtimes.
 
 Comparison guides must research each option independently and identify selection criteria; they do not declare a universal winner.

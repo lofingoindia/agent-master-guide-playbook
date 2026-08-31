@@ -262,6 +262,7 @@ Build the smallest slice that contains the hard problems, not two hello-world ag
 
 ## Related guides
 
+- [Go vs Python vs TypeScript/Node.js](go-vs-python-vs-typescript-node-agent-runtimes.md)
 - [Python agent runtimes](../languages/python-agent-runtimes.md)
 - [TypeScript and Node.js agent runtimes](../languages/typescript-node-agent-runtimes.md)
 - [Choosing an agent runtime language](../languages/choosing-an-agent-runtime-language.md)

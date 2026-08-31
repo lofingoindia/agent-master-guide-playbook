@@ -149,4 +149,4 @@ Conductor’s metadata-only mode can keep inputs/outputs from the managed consol
 - [OpenAI Agents integration](https://docs.dbos.dev/integrations/openai-agents) and [AI quickstart/integrations](https://docs.dbos.dev/ai/ai-quickstart)
 - Regression leads: [cancellation race #767](https://github.com/dbos-inc/dbos-transact-py/issues/767) and [empty workflow ID recovery #759](https://github.com/dbos-inc/dbos-transact-py/issues/759)
 
-See [durable-runtime selection](../comparisons/durable-agent-workflow-runtimes.md) and the [research packet](../research/packets/durable-agent-workflow-runtimes.md).
+See [durable-runtime selection](../comparisons/durable-agent-workflow-runtimes.md), [Go agent runtimes](../languages/go-agent-runtimes.md), [Go vs Python vs TypeScript/Node.js](../comparisons/go-vs-python-vs-typescript-node-agent-runtimes.md), and the [research packet](../research/packets/durable-agent-workflow-runtimes.md).

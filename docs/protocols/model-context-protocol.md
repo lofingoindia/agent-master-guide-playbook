@@ -204,6 +204,7 @@ Stateless transport increases the importance of explicit correlation and replay 
 ## Related guides
 
 - [Protocol selection](protocol-selection.md)
+- [Go agent runtimes](../languages/go-agent-runtimes.md)
 - [Tool contracts](../tools/tool-contracts.md)
 - [Permissions, sandboxing, and secrets](../security/permissions-sandboxing-and-secrets.md)
 - [Prompt injection and untrusted data](../security/prompt-injection-and-untrusted-data.md)

@@ -243,6 +243,7 @@ Do not split components into services merely to match the diagram. Split deploym
 
 - [The production agent loop](../foundations/agent-loop.md)
 - [Choosing an agent runtime language](../languages/choosing-an-agent-runtime-language.md)
+- [Python vs TypeScript/Node.js](../comparisons/python-vs-typescript-node-agent-runtimes.md)
 - [Run controls](run-controls.md)
 - [Durable execution](durable-execution.md)
 - [Idempotency and side effects](../reliability/idempotency-and-side-effects.md)

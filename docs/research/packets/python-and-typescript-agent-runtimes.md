@@ -222,6 +222,12 @@ If no hard requirement decides the choice, build the same production slice in bo
 - “Abort/cancel means rollback”: neither runtime can undo an external commit.
 - Open issues as permanent defects: they are version-scoped evidence and regression-test seeds.
 
+## Guides supported
+
+- [Python agent runtimes in production](../../languages/python-agent-runtimes.md)
+- [TypeScript and Node.js agent runtimes in production](../../languages/typescript-node-agent-runtimes.md)
+- [Python vs TypeScript/Node.js for agent runtimes](../../comparisons/python-vs-typescript-node-agent-runtimes.md)
+
 ## Primary sources
 
 ### Python runtime, serving, validation, and packaging

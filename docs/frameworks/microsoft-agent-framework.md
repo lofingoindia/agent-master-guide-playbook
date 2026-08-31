@@ -1,14 +1,14 @@
 # Microsoft Agent Framework in Production
 
-**Research date:** 2026-08-30  
+**Research date:** 2026-08-31
 **Status:** Research-backed technology guide  
-**Scope:** Current Agent Framework agents, middleware, orchestrations, workflows, checkpoints, and hosting for C#, Python, and Go
+**Scope:** Agent Framework Python `1.16.x`, .NET `1.19.x`, and Go public preview agents, middleware, workflows, checkpoints, integrations, and hosting
 
 ## Bottom line
 
 Choose Microsoft Agent Framework when you need a provider-neutral agent abstraction plus explicit graph workflows, middleware, sessions, OpenTelemetry, and Microsoft hosting/integration paths—especially in .NET, Python, or Go estates.
 
-Treat package maturity per component. The core has GA releases, while integrations and newer harness, skills, security, and protocol surfaces can be stable, release candidate, preview, or experimental. “Agent Framework 1.x” is not one uniform stability guarantee.
+Treat maturity as **language + package + feature**. The checked Go surface is explicitly **public preview**; declarative agents, RAG, CodeAct, handoff orchestration, Foundry managed hosting, Durable Extension, and several evaluation/storage integrations were not yet available there. Python and .NET core/workflow packages have stable releases, but feature-stage markers still label APIs such as FIDES, Agent Hooks, evals, functional workflows, session stores, and selected tool surfaces experimental. Integrations and hosting adapters span released, beta, alpha, release-candidate, and preview tiers. “Agent Framework 1.x” is not one uniform stability guarantee.
 
 ## Position in the Microsoft ecosystem
 
@@ -69,7 +69,7 @@ stateDiagram-v2
     Restored --> NextStep
 ```
 
-The checkpoint boundary is not a database transaction around tool effects. If a tool committed before the superstep checkpoint and the process failed, restore may encounter an ambiguous effect. Use operation IDs, an effect ledger, and reconciliation.
+The checkpoint boundary is not a database transaction around tool effects. If a tool committed before the superstep checkpoint and the process failed, restore may encounter an ambiguous effect. Use operation IDs, an effect ledger, reconciliation, and the application-owned [agent state and event contract](../runtime/agent-state-and-event-contracts.md).
 
 Persist these alongside a checkpoint:
 
@@ -123,7 +123,7 @@ Test nested agents and handoff orchestrations separately. Current issue history 
 
 ## Package and release discipline
 
-The Python 1.13.0 changelog contains stable orchestrations alongside breaking checkpoint/event changes and breaking experimental harness changes. This is healthy transparency, but it means semantic versioning must be applied to the exact package set and maturity labels.
+The researched Python `1.16.0` and .NET `1.19.0` core lines are stable while independently released integrations and feature-stage markers vary. This means semantic versioning must be applied to the exact package set and feature maturity, not the brand or meta-package alone. Use the AutoGen migration guide for behavioral mapping, but verify current provider and tool availability against current package registries—the researched migration tables contained stale planned/available distinctions.
 
 Use a compatibility manifest:
 
@@ -141,7 +141,7 @@ Do not independently float these dependencies in production.
 ## Hosting and durability
 
 - **Self-hosting** gives full control over network, identity, process lifetime, stores, and scaling.
-- **Foundry hosting** integrates provider resources and Microsoft operations but adds service-specific contracts.
+- **Foundry Hosted Agents** is a GA service, while the researched Python/.NET MAF Foundry hosting adapters remain beta/preview and long-running resilience remains preview. Track service, adapter, and optional resilience maturity separately.
 - **Durable Task/Azure Functions integrations** can own failure recovery and long waits; keep agent calls as bounded activities and effect boundaries explicit.
 - **Core checkpointing** supports workflow resume but does not by itself provide a distributed queue, leases, exactly-once effects, or operator repair service.
 
@@ -179,6 +179,10 @@ Primary sources: [overview](https://learn.microsoft.com/en-us/agent-framework/ov
 
 - [Provider-native framework selection](../comparisons/provider-native-agent-frameworks.md)
 - [Custom loop vs framework vs workflow engine](../comparisons/custom-loop-vs-framework-vs-workflow-engine.md)
+- [Go agent runtimes](../languages/go-agent-runtimes.md)
+- [Go vs Python vs TypeScript/Node.js](../comparisons/go-vs-python-vs-typescript-node-agent-runtimes.md)
 - [Durable execution](../runtime/durable-execution.md)
 - [Multi-agent topologies](../orchestration/multi-agent-topologies.md)
-- [Research packet](../research/packets/provider-native-agent-frameworks.md)
+- [Microsoft Agent Framework production playbook](microsoft-agent-framework/README.md)
+- [Deep-dive research packet](../research/packets/microsoft-agent-framework-deep-dive.md)
+- [Provider-native ecosystem packet](../research/packets/provider-native-agent-frameworks.md)

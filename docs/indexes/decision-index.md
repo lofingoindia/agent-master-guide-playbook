@@ -36,6 +36,8 @@
 | Pin vs migrate in-flight long-running runs | [Deployment, release, and incident response](../operations/deployment-release-and-incident-response.md) | Research-backed draft |
 | Interactive vs durable background execution | [Interactive and long-running reference architectures](../architectures/interactive-and-long-running-reference-architectures.md) | Research-backed reference architecture |
 | Python vs TypeScript vs Go vs JVM vs .NET vs Rust | [Choosing an agent runtime language](../languages/choosing-an-agent-runtime-language.md) | Research-backed decision guide |
+| Python vs TypeScript/Node.js | [Direct runtime comparison](../comparisons/python-vs-typescript-node-agent-runtimes.md) | Research-backed decision guide |
+| Go vs Python vs TypeScript/Node.js | [Three-runtime comparison](../comparisons/go-vs-python-vs-typescript-node-agent-runtimes.md) | Research-backed decision guide |
 | Single-language vs polyglot agent platform | [Choosing an agent runtime language](../languages/choosing-an-agent-runtime-language.md) | Research-backed decision guide |
 | Local vs remote tools | [Tool registries, versioning, and lifecycle](../tools/tool-registries-versioning-and-lifecycle.md), [Execution boundaries](../runtime/execution-boundaries.md) | Partial / research-backed lifecycle and boundary |
 | Fixed tool set vs workflow-stage exposure vs retrieval | [Tool discovery and selection](../tools/tool-discovery-and-selection.md) | Research-backed draft |

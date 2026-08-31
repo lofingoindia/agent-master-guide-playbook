@@ -255,6 +255,7 @@ Assert authoritative external state, ledger state, number of semantic effects, a
 - [Execution boundaries](../runtime/execution-boundaries.md)
 - [Run controls](../runtime/run-controls.md)
 - [Durable execution](../runtime/durable-execution.md)
+- [Agent state and event contracts](../runtime/agent-state-and-event-contracts.md)
 - [Tool contracts](../tools/tool-contracts.md)
 - [Runtime failure taxonomy](failure-taxonomy.md)
 - [Queues, scheduling, and backpressure](../operations/queues-scheduling-and-backpressure.md)

@@ -164,4 +164,4 @@ The Python Workflow sandbox catches nondeterministic APIs but explicitly is not 
 - [OpenAI Agents integration](https://github.com/temporalio/sdk-python/blob/main/temporalio/contrib/openai_agents/README.md) and [AI security](https://go.temporal.io/platform-hub/ai-engineering/ai-security)
 - Regression leads: [concurrent local-activity replay #1578](https://github.com/temporalio/sdk-python/issues/1578), [cold-start handler ordering #1591](https://github.com/temporalio/sdk-python/issues/1591), and [multiprocess Activity cancellation #1048](https://github.com/temporalio/sdk-python/issues/1048)
 
-See [durable-runtime selection](../comparisons/durable-agent-workflow-runtimes.md) and the [research packet](../research/packets/durable-agent-workflow-runtimes.md).
+See [durable-runtime selection](../comparisons/durable-agent-workflow-runtimes.md), [Go agent runtimes](../languages/go-agent-runtimes.md), [Go vs Python vs TypeScript/Node.js](../comparisons/go-vs-python-vs-typescript-node-agent-runtimes.md), and the [research packet](../research/packets/durable-agent-workflow-runtimes.md).

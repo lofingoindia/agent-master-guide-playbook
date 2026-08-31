@@ -4,6 +4,8 @@
 **Status:** Research-backed technology guide  
 **Scope:** Current Python and TypeScript SDK concepts; Graph, Swarm, and AWS AgentCore are evaluated as distinct surfaces
 
+> Continue from this concise overview into the [12-guide Strands Agents production engineering area](strands-agents/README.md) for loop/events, models, tools/MCP, sessions, streaming, hooks, orchestration, security, testing, reliability, deployment, and language parity.
+
 ## Bottom line
 
 Choose Strands Agents when a compact model-driven loop, Python or TypeScript, provider choice, MCP, hooks, OpenTelemetry, and an optional AWS deployment path fit the platform. Its clear loop and cancellation documentation make behavior inspectable, but sessions are continuity—not durable effect recovery—and multi-agent semantics differ by language.
@@ -136,4 +138,4 @@ Evaluate the combined system for runtime isolation, workspace persistence, crede
 - [Production operations](https://strandsagents.com/docs/user-guide/deploy/operating-agents-in-production/) and [Python SDK releases](https://github.com/strands-agents/sdk-python/releases)
 - [OneAdvanced production architecture](https://aws.amazon.com/blogs/machine-learning/how-oneadvanced-deployed-over-50-ai-agents-on-uk-sovereign-aws/)
 
-See [independent framework selection](../comparisons/independent-agent-frameworks.md) and the [research packet](../research/packets/independent-agent-frameworks.md).
+See [independent framework selection](../comparisons/independent-agent-frameworks.md), [Python vs TypeScript/Node.js](../comparisons/python-vs-typescript-node-agent-runtimes.md), and the [research packet](../research/packets/independent-agent-frameworks.md).

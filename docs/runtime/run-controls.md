@@ -259,6 +259,9 @@ Track distributions, not only averages:
 ## Related guides
 
 - [The production agent loop](../foundations/agent-loop.md)
+- [Go cancellation and runtime ownership](../languages/go-agent-runtimes.md)
+- [Python cancellation and runtime ownership](../languages/python-agent-runtimes.md)
+- [TypeScript/Node.js abort and runtime ownership](../languages/typescript-node-agent-runtimes.md)
 - [Execution boundaries](execution-boundaries.md)
 - [Durable execution](durable-execution.md)
 - [Idempotency and side effects](../reliability/idempotency-and-side-effects.md)

@@ -4,6 +4,8 @@
 **Status:** Research-backed technology guide  
 **Scope:** AI SDK Core and `ToolLoopAgent`; `WorkflowAgent` is treated as beta at this research snapshot
 
+> Continue from this concise overview into the [12-guide Vercel AI SDK engineering area](vercel-ai-sdk/README.md) for Core, providers, tools, UI streams, persistence/resume, Workflow durability, observability, reliability, deployment, security, and migrations.
+
 ## Bottom line
 
 Choose Vercel AI SDK when TypeScript, web streaming, typed tools, UI message state, and a broad provider adapter ecosystem are central. `ToolLoopAgent` is a practical bounded loop over AI SDK Core; it does not make provider behavior identical or turn UI messages into durable business state.
@@ -138,4 +140,4 @@ Do not infer workflow stability from AI SDK Core stability.
 - [AI SDK 7 announcement](https://vercel.com/blog/ai-sdk-7) and [workflow changelog](https://github.com/vercel/ai/blob/main/packages/workflow/CHANGELOG.md)
 - Adoption tests from [callback forwarding #15864](https://github.com/vercel/ai/issues/15864), [long-running tool timeout #17310](https://github.com/vercel/ai/issues/17310), and [retry-invalidated UI parts #18481](https://github.com/vercel/ai/issues/18481)
 
-See [independent framework selection](../comparisons/independent-agent-frameworks.md) and the [research packet](../research/packets/independent-agent-frameworks.md).
+See [independent framework selection](../comparisons/independent-agent-frameworks.md), [TypeScript and Node.js agent runtimes](../languages/typescript-node-agent-runtimes.md), and the [research packet](../research/packets/independent-agent-frameworks.md).

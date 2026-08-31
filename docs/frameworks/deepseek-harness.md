@@ -2,7 +2,7 @@
 
 **Research date:** 2026-08-31  
 **Status:** Research-backed preview guide  
-**Maturity:** Developer preview; official safety statement says not security-audited or production-ready
+**Maturity:** `0.1.2-alpha.2` developer preview at commit `0a53fb55bea101816fa226bb964ae2bed71c343b`; official safety statement says not security-audited or production-ready
 
 ## Bottom line
 
@@ -30,7 +30,7 @@ That makes capability replacement systematic, but also means configuration and p
 
 ## Event-sourced sessions
 
-The `SessionEvent` log is the source of truth. It records model-visible inputs, request provenance, raw assistant chunks, tools/results, steps/turns, compaction, approvals, and extension events. Messages, surface/UI state, transcripts, telemetry, resume, replay, and fork derive from the same ordered log.
+The `SessionEvent` log is the Harness source of truth. It records model-visible inputs, request provenance, raw assistant chunks, tools/results, steps/turns, compaction, approvals, and extension events. Messages, surface/UI state, transcripts, telemetry, resume, replay, and fork derive from the same ordered log. Map it into the application-owned [agent state and event contract](../runtime/agent-state-and-event-contracts.md); a session log does not replace product identity, authorization, retention, or an external-effect ledger.
 
 ```mermaid
 flowchart LR
@@ -83,7 +83,7 @@ Do not bind the Web UI beyond loopback without a real authenticated reverse prox
 
 ## Modes and model portability
 
-Standard, Code, Minimal, and Creator modes expose materially different authority. Code Mode lets model-generated TypeScript orchestrate multiple tool rounds; Creator Mode can inspect and experiment with the runtime; Minimal Mode can still have broad shell/editor access depending on its composition.
+Standard, PTC, Minimal, and Creator modes expose materially different authority. PTC lets model-generated TypeScript orchestrate multiple tool rounds and is explicitly shell-equivalent trust; Creator Mode can inspect and experiment with the runtime; Minimal Mode can still have broad shell/editor access depending on its composition.
 
 Record a capability manifest per preset:
 
@@ -133,4 +133,4 @@ Custom models may not follow DeepSeek-specific tool conventions. Current discuss
 - [Session model](https://github.com/deepseek-ai/deepseek-harness/blob/master/docs/subsystems/session.md), [persistence](https://github.com/deepseek-ai/deepseek-harness/blob/master/docs/subsystems/persistence.md), and [persistence package contract](https://github.com/deepseek-ai/deepseek-harness/blob/master/packages/session/session-persistence/README.md)
 - Version-specific security/test leads: [audit discussion #817](https://github.com/deepseek-ai/deepseek-harness/discussions/817), [control-plane report #853](https://github.com/deepseek-ai/deepseek-harness/discussions/853), [resume collision #1415](https://github.com/deepseek-ai/deepseek-harness/discussions/1415), and [schema adapter #4747](https://github.com/deepseek-ai/deepseek-harness/discussions/4747)
 
-See [evolving ecosystem selection](../comparisons/evolving-agent-framework-ecosystems.md) and the [research packet](../research/packets/framework-lifecycle-and-second-wave.md).
+Continue with the [DeepSeek Harness production-minded guide](deepseek-harness/README.md). See also [evolving ecosystem selection](../comparisons/evolving-agent-framework-ecosystems.md), the [DeepSeek Harness deep-dive packet](../research/packets/deepseek-harness-deep-dive.md), and the earlier [ecosystem packet](../research/packets/framework-lifecycle-and-second-wave.md).

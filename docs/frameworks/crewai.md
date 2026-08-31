@@ -2,7 +2,7 @@
 
 **Research date:** 2026-08-31  
 **Status:** Research-backed technology guide  
-**Scope:** Current Python Crews and Flows; experimental conversational surfaces and CrewAI AMP are treated separately
+**Scope:** CrewAI `1.15.18` Python Crews and Flows; conversational Flows and CrewAI AMP are treated as separate adoption surfaces
 
 ## Bottom line
 
@@ -91,11 +91,11 @@ Role metaphors do not bound work. Configure and enforce:
 
 Do not interpret a task guardrail retry as permission to repeat an external write. Validate and reserve an effect before execution; return the receipt on retry/resume.
 
-## Conversational Flow maturity
+## Conversational Flow posture
 
-The current conversational Flow surface lives under an experimental namespace. It supplies a built-in turn graph, message state, intent routing, and trace batching. Pin its version and treat each browser request as a fresh runtime instance during tests—the normal production pattern that often reveals missing persisted assistant messages.
+CrewAI `1.15.18` promotes conversational Flows from experimental to stable. The surface supplies a built-in turn graph, message state, intent routing, and trace batching. “Stable” describes the framework API posture; it does not establish application-level durability, concurrency control, or exactly-once effects. Pin the complete package set and treat each browser request as a fresh runtime instance during tests—the normal production pattern that often reveals missing persisted assistant messages.
 
-Maintain an application-owned message/event contract so the experimental reducer can be replaced. Test reconnect, duplicate delivery, partial stream, custom route response, retry invalidation, same-session concurrency, and deployment migration.
+Maintain an application-owned [state and event contract](../runtime/agent-state-and-event-contracts.md) so framework records can be migrated or reduced independently. Test reconnect, duplicate delivery, partial stream, custom route response, retry invalidation, same-session concurrency, and deployment migration.
 
 ## Open source versus AMP
 
@@ -135,12 +135,12 @@ Managed hosting can remove operations without changing effect semantics.
 - explicit checkpoint/replay graph semantics dominate: compare LangGraph or a durable engine;
 - typed Python validation without role metaphors dominates: compare Pydantic AI;
 - TypeScript/full-stack streaming dominates: compare AI SDK or Mastra;
-- the experimental conversational surface is a hard dependency under a strict stability policy.
+- the conversational surface has not passed your persisted-history, same-session concurrency, and upgrade tests under the pinned release.
 
 ## Primary sources and failure-test leads
 
-- [CrewAI concepts](https://docs.crewai.com/core-concepts/Agents), [Flows and persistence](https://github.com/crewAIInc/crewAI/blob/main/docs/v1.15.5/en/concepts/flows.mdx), and [production architecture](https://github.com/crewAIInc/crewAI/blob/main/docs/v1.12.2/en/concepts/production-architecture.mdx)
-- [Conversational Flows](https://github.com/crewAIInc/crewAI/blob/main/docs/v1.15.2/en/guides/flows/conversational-flows.mdx) and [CrewAI AMP](https://docs.crewai.com/enterprise/introduction)
+- [CrewAI `1.15.18` concepts](https://github.com/crewAIInc/crewAI/tree/1.15.18/docs/v1.15.18/en/concepts), [Flows and persistence](https://github.com/crewAIInc/crewAI/blob/1.15.18/docs/v1.15.18/en/concepts/flows.mdx), and [production architecture](https://github.com/crewAIInc/crewAI/blob/1.15.18/docs/v1.15.18/en/concepts/production-architecture.mdx)
+- [`1.15.18` changelog](https://github.com/crewAIInc/crewAI/blob/1.15.18/docs/v1.15.18/en/changelog.mdx), [conversational Flows](https://github.com/crewAIInc/crewAI/blob/1.15.18/docs/v1.15.18/en/guides/flows/conversational-flows.mdx), and [CrewAI AMP](https://docs.crewai.com/enterprise/introduction)
 - Adoption tests from [state restore #6706](https://github.com/crewAIInc/crewAI/issues/6706), [async failure #6380](https://github.com/crewAIInc/crewAI/issues/6380), [replay records #6650](https://github.com/crewAIInc/crewAI/issues/6650), and [conversational persistence #6766](https://github.com/crewAIInc/crewAI/issues/6766)
 
-See [evolving ecosystem selection](../comparisons/evolving-agent-framework-ecosystems.md) and the [research packet](../research/packets/framework-lifecycle-and-second-wave.md).
+Continue with the [CrewAI production engineering playbook](crewai/README.md). See also [evolving ecosystem selection](../comparisons/evolving-agent-framework-ecosystems.md), [Python agent runtimes](../languages/python-agent-runtimes.md), the [CrewAI deep-dive packet](../research/packets/crewai-deep-dive.md), and the earlier [ecosystem packet](../research/packets/framework-lifecycle-and-second-wave.md).

@@ -286,7 +286,9 @@ OpenTelemetry Python traces and metrics are stable; logs are Development at this
 
 ## Related guides
 
+- [Python agent engineering deep playbook](python/README.md)
 - [Choosing an agent runtime language](choosing-an-agent-runtime-language.md)
+- [Go vs Python vs TypeScript/Node.js](../comparisons/go-vs-python-vs-typescript-node-agent-runtimes.md)
 - [Python vs TypeScript/Node.js](../comparisons/python-vs-typescript-node-agent-runtimes.md)
 - [Run controls](../runtime/run-controls.md)
 - [Durable execution](../runtime/durable-execution.md)
@@ -295,7 +297,7 @@ OpenTelemetry Python traces and metrics are stable; logs are Development at this
 
 ## Selected sources
 
-- [Python 3.14 release](https://www.python.org/downloads/release/python-3140/)
+- [Python 3.14.7](https://www.python.org/downloads/release/python-3147/)
 - [`asyncio` tasks and cancellation](https://docs.python.org/3.14/library/asyncio-task.html)
 - [Concurrent futures and subinterpreters](https://docs.python.org/3.14/library/concurrent.futures.html)
 - [PEP 779 free-threaded support](https://peps.python.org/pep-0779/)

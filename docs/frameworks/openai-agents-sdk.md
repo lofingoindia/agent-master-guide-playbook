@@ -1,14 +1,18 @@
 # OpenAI Agents SDK in Production
 
-**Research date:** 2026-08-30  
+**Research date:** 2026-08-31
 **Status:** Research-backed technology guide  
 **Scope:** Current Python and TypeScript SDKs; verify exact release before adoption
+
+> Continue from this concise ecosystem overview into the [12-guide OpenAI Agents SDK production deep dive](openai-agents-sdk/README.md) for lifecycle, tools, sessions, handoffs, streaming, evals, security, recovery, deployment, sandbox, and Python/TypeScript parity.
 
 ## Bottom line
 
 Choose OpenAI Agents SDK when you want a relatively thin, code-first loop with first-class OpenAI Responses features, tools, handoffs, approval interruptions, sessions, and tracing. Keep business state, authorization, effect identity, and durable job ownership outside the SDK.
 
 Do not choose it merely because the model provider is OpenAI. A direct Responses call is smaller for one-step work; a durable workflow engine is stronger when a run must survive crashes, waits, and non-idempotent effects.
+
+The official Agents SDK surface is Python and TypeScript. OpenAI's official Go package is a base API client, not a Go edition of this Agents SDK; Go teams must own the loop or select a different framework.
 
 ## Mental model
 
@@ -143,6 +147,10 @@ At this research snapshot, both language lines are changing rapidly and remain p
 Primary sources: [Agents SDK Python](https://openai.github.io/openai-agents-python/), [running agents](https://openai.github.io/openai-agents-python/running_agents/), [sessions](https://openai.github.io/openai-agents-python/sessions/), [human in the loop](https://openai.github.io/openai-agents-python/human_in_the_loop/), [guardrails](https://openai.github.io/openai-agents-python/guardrails/), [tracing](https://openai.github.io/openai-agents-python/tracing/), [models](https://openai.github.io/openai-agents-python/models/), and [April 2026 SDK evolution](https://openai.com/index/the-next-evolution-of-the-agents-sdk/).
 
 - [Provider-native framework selection](../comparisons/provider-native-agent-frameworks.md)
+- [Python agent runtimes](../languages/python-agent-runtimes.md)
+- [TypeScript and Node.js agent runtimes](../languages/typescript-node-agent-runtimes.md)
+- [Go vs Python vs TypeScript/Node.js](../comparisons/go-vs-python-vs-typescript-node-agent-runtimes.md)
+- [Python vs TypeScript/Node.js](../comparisons/python-vs-typescript-node-agent-runtimes.md)
 - [Production agent loop](../foundations/agent-loop.md)
 - [Execution boundaries](../runtime/execution-boundaries.md)
 - [Durable execution](../runtime/durable-execution.md)

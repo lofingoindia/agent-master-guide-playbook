@@ -2,7 +2,7 @@
 
 **Research date:** 2026-08-31  
 **Status:** Research-backed technology guide  
-**Scope:** Current TypeScript agents, tools, memory, workflows, server/storage, and durable-engine surfaces; experimental networks remain maturity-labeled
+**Scope:** Mastra `@mastra/core@1.63.2` agents, tools, memory, workflows, server/storage, supervisors, and maturity-labeled durable-engine surfaces
 
 ## Bottom line
 
@@ -27,16 +27,17 @@ flowchart TB
 
 Do not attribute one engine’s queue, retry, or replay semantics to another.
 
-## Agent, workflow, or network
+## Agent, workflow, or supervisor
 
 | Shape | Choose for | Boundary |
 |---|---|---|
 | Agent | Open-ended model/tool loop | Total loop limits and effect policy stay application-owned |
 | Workflow | Known steps, branches, parallelism, waits | Version state/snapshots and make steps replay-safe |
 | Agent as workflow step | Bounded pocket of autonomy | Typed input/output and one completion contract |
-| Agent network | Dynamic collaboration that beats simpler topology | Experimental/fast-moving; bound delegation and shared state |
+| Supervisor with subagents | Dynamic collaboration that beats a simpler topology | Bound delegation, shared state, authority, fan-out, and cost |
+| Legacy agent `.network()` | Existing estates only | Deprecated; migrate toward supervisor agents |
 
-Use workflows to encode known control. Agent networks are not a substitute for a DAG the application already understands.
+Use workflows to encode known control. Supervisors are not a substitute for a DAG the application already understands, and the legacy agent `.network()` surface should not anchor new designs.
 
 ## Snapshot and resume contract
 
@@ -97,7 +98,7 @@ Mastra can move agent loops into evented/durable execution and integrate with en
 
 A current issue reports SIGTERM closing a PostgreSQL pool before in-flight durable runs could persist, causing the durability mechanism itself to fail. Graceful shutdown order and forced-kill recovery belong in release gates, not only unit tests.
 
-Do not use private snapshot layout as the product UI contract. Maintain an application run index mapping tenant/thread to active and pending runs with stable event IDs.
+Do not use private snapshot layout as the product UI contract. Maintain an application run index mapping tenant/thread to active and pending runs with stable event IDs, following the application-owned [agent state and event contract](../runtime/agent-state-and-event-contracts.md).
 
 ## RuntimeContext, memory, and security
 
@@ -132,12 +133,12 @@ MCP servers and agents exposed as tools extend the trust boundary. Pin servers, 
 - AI SDK Core plus a small custom loop is sufficient;
 - a mature external workflow engine already owns process state and only bounded agent activities are needed;
 - Python/data-centric integrations dominate;
-- experimental networks or rapidly evolving durable surfaces are hard requirements under a conservative support policy.
+- a supervisor/delegation topology or beta durable surface is a hard requirement under a conservative support policy.
 
 ## Primary sources and failure-test leads
 
-- [Mastra core package](https://github.com/mastra-ai/mastra/tree/main/packages/core), [workflow snapshots](https://mastra.ai/reference/workflows/snapshots), and [current releases](https://github.com/mastra-ai/mastra/releases)
+- [Mastra source snapshot](https://github.com/mastra-ai/mastra/tree/8c88706dc2dc4e4a01d78abe358b6c8cab14d2ad), [core changelog](https://github.com/mastra-ai/mastra/blob/8c88706dc2dc4e4a01d78abe358b6c8cab14d2ad/packages/core/CHANGELOG.md), [workflow snapshots](https://mastra.ai/reference/workflows/snapshots), and [current releases](https://github.com/mastra-ai/mastra/releases)
 - [Approval versus suspension](https://mastra.ai/blog/human-in-the-loop-when-to-use-agent-approval), [dynamic RuntimeContext](https://mastra.ai/blog/dynamic-agents), and [tools/MCP](https://mastra.ai/docs/agents/mcp-guide)
 - Adoption tests from [concurrent context #12029](https://github.com/mastra-ai/mastra/issues/12029), [parallel suspend payload #15552](https://github.com/mastra-ai/mastra/issues/15552), [recovery state API #16044](https://github.com/mastra-ai/mastra/issues/16044), [active-run index #17998](https://github.com/mastra-ai/mastra/issues/17998), and [shutdown durability #21193](https://github.com/mastra-ai/mastra/issues/21193)
 
-See [evolving ecosystem selection](../comparisons/evolving-agent-framework-ecosystems.md) and the [research packet](../research/packets/framework-lifecycle-and-second-wave.md).
+Continue with the [Mastra production engineering guide](mastra/README.md). See also [evolving ecosystem selection](../comparisons/evolving-agent-framework-ecosystems.md), [TypeScript and Node.js agent runtimes](../languages/typescript-node-agent-runtimes.md), the [Mastra deep-dive packet](../research/packets/mastra-deep-dive.md), and the earlier [ecosystem packet](../research/packets/framework-lifecycle-and-second-wave.md).
