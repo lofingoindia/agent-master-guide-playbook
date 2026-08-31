@@ -158,4 +158,4 @@ Client-side journal encryption coverage and SDK parity are version-specific. The
 - [Versioning](https://docs.restate.dev/services/versioning), [introspection](https://docs.restate.dev/services/introspection), and [security](https://docs.restate.dev/server/security)
 - [Agent integration guidance](https://docs.restate.dev/ai/sdk-integrations/integration-guide), [durable agents](https://docs.restate.dev/ai/patterns/durable-agents), and the [Aient case study](https://restate.dev/use-cases/aient)
 
-See [durable-runtime selection](../comparisons/durable-agent-workflow-runtimes.md) and the [research packet](../research/packets/durable-agent-workflow-runtimes.md).
+See [durable-runtime selection](../comparisons/durable-agent-workflow-runtimes.md), [Go agent runtimes](../languages/go-agent-runtimes.md), [Go vs Python vs TypeScript/Node.js](../comparisons/go-vs-python-vs-typescript-node-agent-runtimes.md), and the [research packet](../research/packets/durable-agent-workflow-runtimes.md).

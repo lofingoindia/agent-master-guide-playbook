@@ -227,6 +227,7 @@ Alerts should link to a run timeline, affected principal/resource, policy decisi
 
 - [Evaluation-driven development](evaluation-driven-development.md)
 - [Trajectory and reliability evaluation](trajectory-and-reliability-evaluation.md)
+- [Agent state and event contracts](../runtime/agent-state-and-event-contracts.md)
 - [Durable execution](../runtime/durable-execution.md)
 - [Idempotency and side effects](../reliability/idempotency-and-side-effects.md)
 - [Context engineering](../context-memory/context-engineering.md)

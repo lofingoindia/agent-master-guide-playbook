@@ -66,6 +66,8 @@ Parallel agents should return immutable candidate results. Merge them in one det
 
 The current LlamaAgents stack can embed a Workflow as a library, mount it in `WorkflowServer` for REST/streaming/HITL, and add a coordination backend for recovery and replicas. This is materially different from earlier LlamaDeploy architecture.
 
+Treat `WorkflowServer` as an embeddable application component, not a pre-secured multitenant control plane. The researched server does not install application authentication or tenant authorization for you; deploy restrictive CORS, quotas, request limits, and separate operator/debug routes before exposure.
+
 The DBOS adapter’s documented model is specific:
 
 ```mermaid
@@ -99,7 +101,7 @@ A recovered step can repeat if its durable boundary did not record completion. F
 | External write | Reserve stable operation ID, commit idempotently, reconcile ambiguity |
 | Human response | Deduplicate by response/event ID and bind to exact pending request |
 
-Do not store multi-megabyte document payloads in workflow history. Persist a digest, media type, tenant, authorization label, location, and provenance.
+Do not store multi-megabyte document payloads in workflow history. Persist a digest, media type, tenant, authorization label, location, and provenance. Map framework state and server events into the application-owned [agent state and event contract](../runtime/agent-state-and-event-contracts.md).
 
 ## Security boundary
 
@@ -146,4 +148,4 @@ LlamaIndex’s security policy describes the library as intended for a trusted e
 - [Deprecated LlamaDeploy repository](https://github.com/run-llama/llama_deploy) and [LlamaIndex security policy](https://github.com/run-llama/llama_index/security)
 - Adoption tests from [checkpoint serialization discussion #18265](https://github.com/run-llama/llama_index/discussions/18265), [nested streaming #15838](https://github.com/run-llama/llama_index/discussions/15838), and [parallel shared state #18282](https://github.com/run-llama/llama_index/discussions/18282)
 
-See [evolving ecosystem selection](../comparisons/evolving-agent-framework-ecosystems.md) and the [research packet](../research/packets/framework-lifecycle-and-second-wave.md).
+Continue with the [LlamaIndex and LlamaAgents engineering guide](llamaindex-llamaagents/README.md). See also [evolving ecosystem selection](../comparisons/evolving-agent-framework-ecosystems.md), [Python agent runtimes](../languages/python-agent-runtimes.md), the [deep-dive packet](../research/packets/llamaindex-llamaagents-deep-dive.md), and the earlier [ecosystem packet](../research/packets/framework-lifecycle-and-second-wave.md).

@@ -4,6 +4,8 @@
 **Status:** Research-backed technology guide  
 **Scope:** Pydantic AI V2 line, with explicit durable integrations; pin fixed versions and recheck security advisories
 
+> Continue from this concise overview into the [14-guide Pydantic AI production playbook](pydantic-ai/README.md) for lifecycle, providers, tools, validation, streaming, limits, history, durable adapters, delegation, evals, telemetry, security, deployment, and migration.
+
 ## Bottom line
 
 Choose Pydantic AI for a Python-native agent with typed dependencies, validated tools and outputs, explicit model/tool control flow, and maintained integration paths to durable engines. It is strongest when schema correctness and predictable application integration matter more than a visual graph abstraction.
@@ -127,4 +129,4 @@ Review the current [security advisories](https://github.com/pydantic/pydantic-ai
 - [Security advisories](https://github.com/pydantic/pydantic-ai/security)
 - Adoption tests from [cancellation semantics issue #6460](https://github.com/pydantic/pydantic-ai/issues/6460) and [durable dynamic-tool validation issue #6979](https://github.com/pydantic/pydantic-ai/issues/6979)
 
-See [independent framework selection](../comparisons/independent-agent-frameworks.md) and the [research packet](../research/packets/independent-agent-frameworks.md).
+See [independent framework selection](../comparisons/independent-agent-frameworks.md), [Python agent runtimes](../languages/python-agent-runtimes.md), and the [research packet](../research/packets/independent-agent-frameworks.md).

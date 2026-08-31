@@ -301,7 +301,9 @@ Provide operator actions for inspect, pause, cancel, retry safe unit, reconcile 
 ## Related guides
 
 - [The production agent loop](../foundations/agent-loop.md)
+- [Python vs TypeScript/Node.js](../comparisons/python-vs-typescript-node-agent-runtimes.md)
 - [Run controls](run-controls.md)
+- [Agent state and event contracts](agent-state-and-event-contracts.md)
 - [Idempotency and side effects](../reliability/idempotency-and-side-effects.md)
 - [Decision guide](../comparisons/custom-loop-vs-framework-vs-workflow-engine.md)
 - [Temporal vs Restate vs DBOS vs Prefect vs Dapr Workflow](../comparisons/durable-agent-workflow-runtimes.md)

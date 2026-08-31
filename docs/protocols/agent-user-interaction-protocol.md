@@ -193,6 +193,7 @@ Keep user-visible status truthful: “requested,” “running,” “waiting fo
 - [Protocol selection](protocol-selection.md)
 - [Run controls](../runtime/run-controls.md)
 - [Durable execution](../runtime/durable-execution.md)
+- [Agent state and event contracts](../runtime/agent-state-and-event-contracts.md)
 - [Prompt injection and untrusted data](../security/prompt-injection-and-untrusted-data.md)
 - [Observability and tracing](../evaluation/observability-and-tracing.md)
 - [Interactive and long-running reference architectures](../architectures/interactive-and-long-running-reference-architectures.md)

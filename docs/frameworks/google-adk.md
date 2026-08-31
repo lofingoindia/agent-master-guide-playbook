@@ -1,14 +1,18 @@
 # Google Agent Development Kit in Production
 
-**Research date:** 2026-08-30  
+**Research date:** 2026-08-31
 **Status:** Research-backed technology guide  
 **Scope:** ADK agent/runtime concepts and ADK 2 graph workflows; verify language and release-specific support
+
+> Continue from this concise overview into the [12-guide Google ADK production playbook](google-adk/README.md) for Runner/events, models, tools/MCP/A2A, state/artifacts/memory, graph workflows, streaming, HITL, deployment, evaluation, reliability, security, and language parity.
 
 ## Bottom line
 
 Choose Google ADK when you want a service-oriented agent toolkit with explicit sessions, state, memory, artifacts, lifecycle plugins, broad language availability, graph workflows, and a path from local containers to Google-managed Agent Runtime.
 
 Its strength is also its adoption risk: ADK spans many abstractions and languages. Pin an exact capability profile. Do not translate “supported by ADK” into “identical in Python, TypeScript, Go, Java, Kotlin, self-hosting, and Agent Runtime.”
+
+At this snapshot, ADK Go 2.0 is GA and requires Go 1.25 or later. Its checked release adds graph-based workflows, parallel and loop primitives, and human-in-the-loop tool confirmation. That dated Go baseline does not prove parity with every Python or TypeScript feature, plugin, service implementation, or deployment surface.
 
 ## Runtime model
 
@@ -162,6 +166,10 @@ The July 2026 ADK 2.5.0 replay regression is a useful adoption test: a previous 
 Primary sources: [ADK documentation](https://adk.dev/), [sessions](https://adk.dev/sessions/), [state](https://adk.dev/sessions/state/), [plugins](https://adk.dev/plugins/), [observability](https://adk.dev/observability/), [deployment](https://adk.dev/deploy/), [ADK 2 workflow guide](https://github.com/google/adk-python/blob/main/docs/guides/workflow/workflow/index.md), and [runner architecture](https://github.com/google/adk-python/blob/main/.agents/skills/adk-architecture/references/interfaces/runner.md). Version-specific evidence: [workflow replay issue #6497](https://github.com/google/adk-python/issues/6497) and [concurrent-turn discussion #790](https://github.com/google/adk-python/discussions/790).
 
 - [Provider-native framework selection](../comparisons/provider-native-agent-frameworks.md)
+- [Choosing an agent runtime language](../languages/choosing-an-agent-runtime-language.md)
+- [Go agent runtimes](../languages/go-agent-runtimes.md)
+- [Go vs Python vs TypeScript/Node.js](../comparisons/go-vs-python-vs-typescript-node-agent-runtimes.md)
+- [Python vs TypeScript/Node.js](../comparisons/python-vs-typescript-node-agent-runtimes.md)
 - [Durable execution](../runtime/durable-execution.md)
 - [Delegation, handoffs, and shared state](../orchestration/delegation-handoffs-and-shared-state.md)
 - [Observability and tracing](../evaluation/observability-and-tracing.md)

@@ -173,6 +173,13 @@ Score total ownership cost and verified behavior. Lines of code and “hello age
 
 ## Related guides
 
+- [Rust agent engineering](rust/README.md)
+- [Go agent engineering](go/README.md)
+- [Go agent runtimes in production](go-agent-runtimes.md)
+- [Python agent runtimes in production](python-agent-runtimes.md)
+- [TypeScript and Node.js agent runtimes in production](typescript-node-agent-runtimes.md)
+- [Go vs Python vs TypeScript/Node.js](../comparisons/go-vs-python-vs-typescript-node-agent-runtimes.md)
+- [Python vs TypeScript/Node.js](../comparisons/python-vs-typescript-node-agent-runtimes.md)
 - [Custom loop vs framework vs workflow engine](../comparisons/custom-loop-vs-framework-vs-workflow-engine.md)
 - [Run controls](../runtime/run-controls.md)
 - [Durable execution](../runtime/durable-execution.md)

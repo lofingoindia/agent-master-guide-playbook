@@ -4,6 +4,8 @@
 **Status:** Research-backed technology guide  
 **Scope:** Current Python documentation and deployment surfaces; verify package, server, and persistence versions before adoption
 
+> Continue from this ecosystem overview into the [14-guide LangGraph production playbook](langgraph/README.md) for state/reducer design, checkpoint and interrupt semantics, streaming, subgraphs, effects, Agent Server, security, testing, and migrations.
+
 ## Bottom line
 
 Use **LangGraph** when explicit state, transitions, interrupts, checkpoint inspection, replay, and subgraphs are core requirements. Add **LangChain agents** when their middleware and integration layer removes useful plumbing. Choose **Deep Agents** when you deliberately want an opinionated filesystem, planning, memory, sandbox, and subagent harness.
@@ -146,4 +148,4 @@ Writable memory needs separate governance. Keep human-owned instructions immutab
 - [Deep Agents overview](https://docs.langchain.com/oss/python/deepagents/overview), [subagents](https://docs.langchain.com/oss/python/deepagents/subagents), and [memory](https://docs.langchain.com/oss/python/deepagents/memory)
 - Adoption tests from [parallel interrupt IDs issue #6626](https://github.com/langchain-ai/langgraph/issues/6626) and [memory ownership/context budget issue #5720](https://github.com/langchain-ai/deepagents/issues/5720)
 
-See [independent framework selection](../comparisons/independent-agent-frameworks.md) and the [research packet](../research/packets/independent-agent-frameworks.md).
+See [independent framework selection](../comparisons/independent-agent-frameworks.md), [Python agent runtimes](../languages/python-agent-runtimes.md), [TypeScript and Node.js agent runtimes](../languages/typescript-node-agent-runtimes.md), and the [research packet](../research/packets/independent-agent-frameworks.md).

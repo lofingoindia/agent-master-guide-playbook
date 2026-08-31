@@ -1,8 +1,10 @@
 # Claude Agent SDK and Managed Agents in Production
 
-**Research date:** 2026-08-30  
+**Research date:** 2026-08-31  
 **Status:** Research-backed technology guide  
 **Scope:** Self-hosted Claude Agent SDK and beta Claude Managed Agents; these are different runtime choices
+
+> Continue from this concise overview into the [13-guide Claude Agent SDK and Anthropic agent ecosystem area](claude-agent-sdk/README.md) for the process/workspace runtime, loop, extensions, sessions/compaction, events, permissions, delegation, hosting, testing, reliability, Managed Agents, and migrations.
 
 ## Bottom line
 
@@ -152,6 +154,7 @@ Managed execution is valuable when long-lived sandbox scheduling is undifferenti
 Primary sources: [Agent SDK overview](https://code.claude.com/docs/en/agent-sdk/overview), [agent loop](https://code.claude.com/docs/en/agent-sdk/agent-loop), [permissions](https://code.claude.com/docs/en/agent-sdk/permissions), [hooks](https://code.claude.com/docs/en/agent-sdk/hooks), [sessions](https://code.claude.com/docs/en/agent-sdk/sessions), [session storage](https://code.claude.com/docs/en/agent-sdk/session-storage), [hosting](https://code.claude.com/docs/en/agent-sdk/hosting), [Managed Agents](https://platform.claude.com/docs/en/managed-agents/overview), and [containment lessons](https://www.anthropic.com/engineering/how-we-contain-claude).
 
 - [Provider-native framework selection](../comparisons/provider-native-agent-frameworks.md)
+- [Python vs TypeScript/Node.js](../comparisons/python-vs-typescript-node-agent-runtimes.md)
 - [Permissions, sandboxing, and secrets](../security/permissions-sandboxing-and-secrets.md)
 - [Compaction and continuity](../context-memory/compaction-and-continuity.md)
 - [Interactive and long-running architectures](../architectures/interactive-and-long-running-reference-architectures.md)

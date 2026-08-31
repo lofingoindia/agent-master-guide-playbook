@@ -142,4 +142,4 @@ Workflow history contains inputs/outputs and Activity results. Avoid credentials
 - [Dapr Agents introduction](https://docs.dapr.io/developing-ai/dapr-agents/dapr-agents-introduction/), [patterns](https://docs.dapr.io/developing-ai/dapr-agents/dapr-agents-patterns/), and [hooks/HITL](https://docs.dapr.io/developing-ai/dapr-agents/dapr-agents-hooks/)
 - Regression leads: [Dapr releases](https://github.com/dapr/dapr/releases) and [workflow routing regression #10039](https://github.com/dapr/dapr/issues/10039)
 
-See [durable-runtime selection](../comparisons/durable-agent-workflow-runtimes.md) and the [research packet](../research/packets/durable-agent-workflow-runtimes.md).
+See [durable-runtime selection](../comparisons/durable-agent-workflow-runtimes.md), [Go agent runtimes](../languages/go-agent-runtimes.md), [Go vs Python vs TypeScript/Node.js](../comparisons/go-vs-python-vs-typescript-node-agent-runtimes.md), and the [research packet](../research/packets/durable-agent-workflow-runtimes.md).
